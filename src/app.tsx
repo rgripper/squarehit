@@ -21,6 +21,11 @@ export function App() {
             ))}
           </div>
           <div style={{ flex: 3 }}>
+            {battlefield.ships.map((x) => (
+              <li style={x.sunk ? { color: "red", textDecoration: "line-through" } : {}}>
+                {x.positions.length === 5 ? "Battleship" : x.positions.length === 4 ? "Destroyer" : "Other"}
+              </li>
+            ))}
             {battlefield.grid.map((row) => (
               <div style={{ display: "grid", gridTemplateColumns: `repeat(${battlefield.grid.length}, 1fr)` }}>
                 {row.map((cell) => (
