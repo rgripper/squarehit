@@ -24,5 +24,5 @@ cd squarehit
 npm -g add pnpm
 pnpm i
 pnpm build # to build
-pnpm preview # to run local server with a preview of the game (http://127.0.0.1:4173/)
+pnpm preview # to run local server with a preview of the game (http://127.0.0.1:4173/squarehit)
 ```
