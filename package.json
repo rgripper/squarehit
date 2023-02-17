@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "pnpm build --base squarehit && pnpm gh-pages -d dist",
+    "deploy": "pnpm build && pnpm gh-pages -d dist",
     "test": "vitest src"
   },
   "dependencies": {
