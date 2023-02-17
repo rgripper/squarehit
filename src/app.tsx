@@ -1,6 +1,6 @@
 import { useState } from "preact/hooks";
 import "./app.css";
-import { CellPosition, createBattlefield, hitPosition } from "./main";
+import { CellPosition, createBattlefield, hitPosition } from "./Battlefield";
 
 export function App() {
   const [battlefield, setBattlefield] = useState(() => createBattlefield(10, 10));
@@ -26,6 +26,8 @@ export function App() {
                 {row.map((cell) => (
                   <div
                     onClick={() => {
+                      if (cell.hit) return;
+
                       setHits((x) => [...x, cell.position]);
                       const { gameOver } = hitPosition(battlefield, cell.position);
                       setGameOver(gameOver);
